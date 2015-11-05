@@ -24,10 +24,10 @@
 ## TODO
 
 统计脚本：
-- [ ] 主文档加载速度，利用 Navigation Timing API 取得；
-- [ ]静态资源加载速度，利用 Resource Timing API 取得；
-- [ ]首次渲染速度，IE 下用 msFirstPaint 取得，Chrome 下利用 loadTimes 取得；
-- [ ]文档生成速度，这个是后端的事，不做；
+* 主文档加载速度，利用 Navigation Timing API 取得；
+* 静态资源加载速度，利用 Resource Timing API 取得；
+* 首次渲染速度，IE 下用 msFirstPaint 取得，Chrome 下利用 loadTimes 取得；
+* 文档生成速度，这个是后端的事，不做；
 
 采集主文档加载速度的具体做法是：
 
