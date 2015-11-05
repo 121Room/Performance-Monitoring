@@ -10,11 +10,24 @@
  - https://github.com/hax/WebPerf
  - http://www.infoq.com/cn/articles/html5-performance-api-monitoring
  - https://github.com/huanleguang/hlg-front/tree/master/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E7%9B%91%E6%8E%A7
+- http://tech.meituan.com/performance-framework-and-platform.html
 
 ## 目标
 
-1.  完成服务器搭建，写好埋点js，手动跑页面，得到页面加载性能的数据（json格式）。数据类型有：
+ 完成服务器搭建，写好埋点js，手动跑页面，得到页面加载性能的数据（json格式）。数据类型有：
  - 白屏时间
  - 页面渲染完成时间
  - 页面load时间
  - 。。。
+
+## TODO
+
+统计脚本：
+- [ ] 主文档加载速度，利用 Navigation Timing API 取得；
+- [ ]静态资源加载速度，利用 Resource Timing API 取得；
+- [ ]首次渲染速度，IE 下用 msFirstPaint 取得，Chrome 下利用 loadTimes 取得；
+- [ ]文档生成速度，则是在后端应用内打点来获得（这个先不做）；
+
+本地性能监控：
+
+直接用 [PhantomJS](http://phantomjs.org/)，所有数据都有了
