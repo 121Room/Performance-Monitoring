@@ -26,7 +26,22 @@
 - [ ] 主文档加载速度，利用 Navigation Timing API 取得；
 - [ ]静态资源加载速度，利用 Resource Timing API 取得；
 - [ ]首次渲染速度，IE 下用 msFirstPaint 取得，Chrome 下利用 loadTimes 取得；
-- [ ]文档生成速度，则是在后端应用内打点来获得（这个先不做）；
+- [ ]文档生成速度，这个是后端的事，不做；
+
+采集主文档加载速度的具体做法是：
+
+![navigation-timing](navigation-timing.png)
+
+- 在主文档 load 之前提供可缓存数据的接口，方便在统计脚本载入前就可以准备数据；
+- 在主文档 load 之后注入数据收集脚本，该脚本加载完成之后会处理所有的数据；
+- 利用 Navigation Timing API 收集计算得到上图中的指标；
+- 给所有数据打上页面、地理位置、浏览器等标签，方便更细维度的分析；
+
+采集静态资源的加载速度：
+
+![resource-timing](resource-timing.png)
+
+如果使用 CDN 的话，需要让 CDN 服务商加上 Timing-Allow-Origin 的响应头，才能拿到静态资源的数据。
 
 本地性能监控：
 
