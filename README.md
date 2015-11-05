@@ -8,6 +8,7 @@
 
  - http://fex.baidu.com/blog/2014/05/build-performance-monitor-in-7-days/
  - https://github.com/hax/WebPerf
+ - http://www.infoq.com/cn/articles/html5-performance-api-monitoring
 
 ## 目标
 
