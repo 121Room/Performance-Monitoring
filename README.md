@@ -48,3 +48,7 @@
 本地性能监控：
 
 直接用 [PhantomJS](http://phantomjs.org/)，所有数据都有了
+
+
+需要统计的一些数据：<http://fex.baidu.com/blog/2014/05/front_end-data/>，
+更多的数据项可以直接看 oneAPM 的吧。
